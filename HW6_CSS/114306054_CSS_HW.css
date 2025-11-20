@@ -1,0 +1,194 @@
+body {
+	background-color: #f0f0f0;
+}
+
+.main-container {
+	display: flex;
+	justify-content: center;
+	align-items: stretch;
+	overflow: hidden;
+	color: black;
+	background-color: #ffffff;
+	padding: 0;
+	width: 1000px;
+	max-width: 100%;
+	border-radius: 10px;
+	box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+}
+
+/* Panels */
+.left-panel {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background-color: #649ce8;
+	margin: 0;
+	width: 30%;
+}
+
+.right-panel {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background-color: #ffffff;
+	padding: 20px;
+	width: 70%;
+}
+
+/* Panel Items (mostly left) */
+.photo-panel {
+	width: 100%;
+}
+
+.text-content {
+	color: #ffffff;
+	font-family: Calibri, Verdana, Helvetica;
+	font-size: 14px;
+	width: 87%;
+	text-align: left;
+}
+
+.name {
+	font-weight: bold;
+	font-size: 24px;
+	margin-top: 16px;
+	margin-bottom: 0px;
+}
+
+.student-tag {
+	margin-top: 0px;
+}
+
+.left-panel-header {
+	font-weight: bold;
+	font-size: 15px;
+	border-bottom: 0.5px solid white;
+	padding-bottom: 5px;
+}
+
+/* Panel Items (right) */
+.section {
+	color: #1f2736;
+	font-family: Calibri, Verdana, Helvetica;
+	font-size: 14px;
+	text-align: left;
+}
+
+.section-title{
+	color: #1f2736;
+	font-family: Calibri, Verdana, Helvetica;
+	font-weight: bold;
+	font-size: 18px;
+	border-bottom: 1.5px solid black;
+	padding-bottom: 5px;
+}
+
+/* Education Section */
+.education-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.education-item {
+  display: flex;
+  align-items: center;
+}
+
+.year {
+	min-width: 100px;
+	color: #384b6e;
+	font-weight: bold;
+}
+
+.description {
+	flex: 1;
+	color: #1f2736;
+}
+
+
+/* SKills Section */
+.tags {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.tag {
+  display: inline-block;
+  padding: 4px 11px;
+  border-radius: 999px;
+  background: #f0f5ff;
+  color: #0f4fab;
+  font-size: 14px;
+}
+
+/* Homework & Lab Section */
+.hw-lab-container {
+  display: flex;
+  gap: 16px;
+}
+
+.card {
+  background: #f7f8fa;
+  padding: 12px;
+  border-radius: 10px;
+}
+
+.hw-column, .lab-column {
+  flex: 1;
+}
+
+.hw-column h3, .lab-column h3 {
+  margin: 0 0 8px 0;
+  font-size: 14px;
+}
+
+.hw-column ul, .lab-column ul {
+  margin: 0;
+  padding-left: 18px;
+}
+
+.hw-column a, .lab-column a {
+  color: #0f4fab;
+  text-decoration: none;
+}
+
+.hw-column a:hover, .lab-column a:hover {
+  text-decoration: underline;
+}
+
+/* Favorite Music Section*/
+.music-row {
+  display: flex;
+  gap: 12px;
+  justify-content: space-between;
+  align-items: stretch;
+  flex-wrap: nowrap;
+}
+
+.music-item {
+  text-align: center;
+  flex: 1;
+  max-width: 25%;
+  text-decoration: none;
+}
+
+.music-item img {
+  width: 100%;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  border-radius: 8px;
+  display: block;
+}
+
+.music-title {
+  margin-top: 8px;
+  color: #0f4fab;
+  font-size: 12px;
+}
+
+.music-note {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #1f2736;
+}
