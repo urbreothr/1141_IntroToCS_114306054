@@ -1,0 +1,40 @@
+body {
+        height: 100vh;
+        width: 100vw;
+        background-image: linear-gradient(45deg, #f24333, #ff8c21, #e6c017, #95c74a, #3e9df0, #6d72de, #9660bd);
+        font-family: OCR A Std, monospace;
+        color: #ffffff;
+        font-weight: bold;
+    }
+
+.glowing-text {
+    color: #ffffff;
+    text-shadow: 0 0 10px #ffffff;
+}
+
+button {
+    outline: none; 
+    box-shadow:none; 
+    border:none;
+    box-shadow: 0 0 8px rgba(255, 255, 255, 0.7);
+    transition: 0.3s;
+    color: white;                       
+    border: 2px solid white;           
+    background-color: transparent;
+    border-radius: 10px;
+    font-family: OCR A Std, monospace;
+    padding: 3px 7px;
+}
+
+input {
+    outline: none;
+    box-shadow: none;
+    border: 2px solid white;  
+    background: transparent;  
+    color: white;           
+    padding: 3px 10px;
+    border-radius: 10px;     
+    box-shadow: 0 0 8px rgba(255, 255, 255, 0.7);
+    transition: 0.3s; 
+}
+
