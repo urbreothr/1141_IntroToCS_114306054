@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>114306054_JS2_Lab4</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<img src="Boguette-meme-5.jpg" class="bg-image">
+	<div class="overlay"></div>
+	<h2>Grade Statistics</h2>
+
+<div class="input-area">
+    <input type="number" id="math" placeholder="Math">
+    <input type="number" id="english" placeholder="English">
+    <button id="submitBtn">Submit</button>
+</div>
+
+<table id="gradeTable">
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>Math</th>
+            <th>English</th>
+            <th>Average</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        
+    </tbody>
+
+    <tfoot>
+        <tr>
+            <th>Average</th>
+            <th id="mathAvg">0</th>
+            <th id="englishAvg">0</th>
+            <th id="overallAvg">0</th>
+        </tr>
+    </tfoot>
+    <p>
+
+    </p>
+</table>
+
+<script>
+    const submitBtn = document.getElementById("submitBtn");
+    const mathInput = document.getElementById("math");
+    const englishInput = document.getElementById("english");
+    const tableBody = document.querySelector("#gradeTable tbody");
+
+    let rowCount = 0;
+
+    submitBtn.addEventListener("click", function () {
+        const math = Number(mathInput.value);
+        const english = Number(englishInput.value);
+
+        if (isNaN(math) || isNaN(english)) {
+            alert("Please enter valid numbers");
+            return;
+        }
+
+        rowCount++;
+        const avg = ((math + english) / 2).toFixed(2);
+
+        const row = document.createElement("tr");
+        row.innerHTML = `
+            <td>${rowCount}</td>
+            <td>${math}</td>
+            <td>${english}</td>
+            <td>${avg}</td>
+        `;
+
+        tableBody.appendChild(row);
+        updateColumnAverages();
+
+        mathInput.value = "";
+        englishInput.value = "";
+    });
+
+    function updateColumnAverages() {
+        const rows = tableBody.querySelectorAll("tr");
+        let mathSum = 0;
+        let englishSum = 0;
+        let avgSum = 0;
+
+        rows.forEach(row => {
+            mathSum += Number(row.children[1].textContent);
+            englishSum += Number(row.children[2].textContent);
+            avgSum += Number(row.children[3].textContent);
+        });
+
+        const count = rows.length;
+
+        document.getElementById("mathAvg").textContent = (mathSum / count).toFixed(2);
+        document.getElementById("englishAvg").textContent = (englishSum / count).toFixed(2);
+        document.getElementById("overallAvg").textContent = (avgSum / count).toFixed(2);
+    }
+</script>
+
+</body>
+</html>
